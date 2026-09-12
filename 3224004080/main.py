@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 import sys
+import re
 from pathlib import Path
 
 
 NGRAM_SIZE = 2
+NON_ALNUM_PATTERN = re.compile(r"[\W_]+", flags=re.UNICODE)
 
 
 def read_text(path: str) -> str:
@@ -22,7 +24,7 @@ def read_text(path: str) -> str:
 
 def normalize_text(text: str) -> str:
     """去除空白和标点，只保留中英文字符及数字。"""
-    return "".join(character for character in text if character.isalnum())
+    return NON_ALNUM_PATTERN.sub("", text)
 
 
 def build_ngrams(text: str, size: int = NGRAM_SIZE) -> set[str]:
