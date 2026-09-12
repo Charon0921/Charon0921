@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-import sys
 import re
+import sys
 from pathlib import Path
 
 
@@ -50,6 +50,7 @@ def calculate_similarity(original: str, copied: str) -> float:
 
 
 def main(arguments: list[str]) -> int:
+    """处理命令行参数，计算相似度并写入答案文件。"""
     if len(arguments) != 3:
         print("用法: python main.py 原文路径 抄袭文路径 答案路径", file=sys.stderr)
         return 2

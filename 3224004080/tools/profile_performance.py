@@ -1,11 +1,5 @@
 """为论文查重程序生成可重复的性能分析样本。"""
 
-import sys
-from pathlib import Path
-
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(PROJECT_ROOT))
-
 from main import calculate_similarity
 
 
