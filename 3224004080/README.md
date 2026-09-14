@@ -23,6 +23,13 @@ GitHub 仓库：https://github.com/Charon0921/Charon0921/tree/main/3224004080
 ├── main.py                      # 查重程序入口
 ├── requirements.txt             # 依赖说明（仅使用标准库）
 ├── README.md                    # 项目说明
+├── 测试文本/
+│   ├── orig.txt                 # 原文样例
+│   ├── orig_0.8_add.txt         # 增加版抄袭文
+│   ├── orig_0.8_del.txt         # 删除版抄袭文
+│   ├── orig_0.8_dis_1.txt       # 微改版抄袭文
+│   ├── orig_0.8_dis_10.txt      # 中改版抄袭文
+│   └── orig_0.8_dis_15.txt      # 大改版抄袭文
 ├── tests/
 │   └── test_main.py             # 单元测试（13 项）
 └── tools/
@@ -40,7 +47,7 @@ python main.py 原文路径 抄袭文路径 答案路径
 示例：
 
 ```bash
-python main.py C:\tests\orig.txt C:\tests\orig_add.txt C:\tests\ans.txt
+python main.py C:\tests\orig.txt C:\tests\orig_0.8_add.txt C:\tests\ans.txt
 ```
 
 程序会将相似度写入答案文件，内容格式如下：
